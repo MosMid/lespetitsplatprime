@@ -310,11 +310,6 @@ function mainSearchFunction(){
                 recipeBuffer.push(recipes[i])
             }
         }
-        /* for (let i = 0; i < recipes.length; i++){
-            if(recipes[i].description.toUpperCase().includes(filter)){
-                if(!recipeBuffer.includes(recipes[i])) recipeBuffer.push(recipes[i])
-            }
-        } */
         recipes.forEach(recipe=>{
             if(recipe.description.toUpperCase().includes(filter)){
                 if(!recipeBuffer.includes(recipe)) recipeBuffer.push(recipe)
