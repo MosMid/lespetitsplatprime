@@ -305,11 +305,11 @@ function mainSearchFunction(){
             event.preventDefault();
         });
         let filter = searchInput.value.toUpperCase();
-        for (let i = 0; i < recipes.length; i++){
-            if(recipes[i].name.toUpperCase().includes(filter)){
-                recipeBuffer.push(recipes[i])
+        recipes.forEach(recipe=>{
+            if(recipe.name.toUpperCase().includes(filter)){
+                recipeBuffer.push(recipe)
             }
-        }
+        })
         recipes.forEach(recipe=>{
             if(recipe.description.toUpperCase().includes(filter)){
                 if(!recipeBuffer.includes(recipe)) recipeBuffer.push(recipe)
